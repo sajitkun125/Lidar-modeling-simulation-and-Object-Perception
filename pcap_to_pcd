@@ -1,0 +1,14 @@
+In order to convert the pcap files into pcd files, You have to use velodyne_pointcloud
+package for ros. I downloaded the package using the command
+sudo apt-get install ros-kinetic-velodyne
+
+THen for the file conversion.
+
+RUn the ros   using -> "roscore" in one of the terminals
+In the second terminal follow this command:
+
+roslaunch velodyne_pointcloud 32e_points.launch pcap:=(paht of your file)
+
+In the other terminal run this command at the same time to the second terminal command:
+
+rosrun pcl_ros pointcloud_to_pcd input:=/velodyne_points _prefix:=(path to save it)
