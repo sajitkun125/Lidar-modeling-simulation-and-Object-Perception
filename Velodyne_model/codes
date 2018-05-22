@@ -1,0 +1,11 @@
+
+for mounting share folder:
+sudo mount -t vboxsf -o uid=$UID,gid=$(id -g) VB_SHARE ~/host
+
+
+moving model to gazebo models directory:
+/.gazebo/models$ mv /home/user/host/velodyne_hdl32 /home/user/.gazebo/models
+
+lunch velodyne simulator:
+roslaunch velodyne_description example.launch
+
